@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.header{
+			height: 80px;
+			max-width:900px;
+			margin: auto;
+			background-color: #cca;
+			position: relative;		
+		}
+		.logo{
+			float: left;
+		}
+		.menu{
+			float: right;
+		}
+		.menu li{
+			display: inline-block;
+		}
+		.menu li a{
+			display: block;
+			color: #69CA62;
+			text-decoration: none;
+			padding: 1em;
+		}
+		.showmenu{
+			display: none;
+		}
+		@media screen and (max-width: 768px) {
+			.menu{
+				max-height: 0;
+				overflow: hidden;
+				margin-top: 1px;
+				position: absolute;
+				z-index: 100;
+				top: 81px;
+				left: 0;
+				right: 0;
+				background-color: #0F222B;
+			}
+			.menu li{
+				display: block;
+				border-bottom: 1px dashed #69CA62;
+			}
+			.menu li a{
+
+			}
+			.menu li a:hover{
+				background: #69CA62;
+    			color: #fff;
+			}
+			.showmenu{
+				display: block;
+				float: right;
+				margin: 1em;
+			}
+			.menu-show .menu{
+				max-height: 500px; 
+			}
+		}
+
+
+		
+		
+	</style>
+</head>
+<body>
+
+	<div class="header">
+
+			<div class="logo">logo</div>
+			<ul class="menu">
+					<li><a href="#">首頁</a></li>
+					<li><a href="#" id="feature-btn">特色</a></li>
+					<li><a href="#" id="chef-btn">主廚</a></li>
+					<li><a href="#" id="map-btn">地圖</a></li>
+					<li><a href="cart.html">點餐</a></li>
+					<li><a href="register.html">註冊</a></li>
+			</ul>
+			<a href="#" class="showmenu">
+				<i class="fas fa-list right"></i>
+			</a>
+		<!--<div class="logo"><a href=""><p>六角西餐廳</p></a></div>
+		
+		
+		
+		
+		<ul class="menu">
+			<li><a href=""><i class="fa fa-cutlery menu-icon"></i>六角特色</a></li>
+			<li><a href=""><i class="fa fa-comment menu-icon"></i>連絡我們</a></li>
+			<li><a href=""><i class="fa fa-shopping-cart menu-icon"></i>線上訂餐</a></li>
+			<li><a href=""><i class="fa fa-sign-in menu-icon"></i>會員登入</a></li>
+			<li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+		</ul>
+		<div class="menu-burger"><i class="fas fa-list right"></i></div>-->
+	</div>
+	
+
+
+	<script src="https://kit.fontawesome.com/094337ecc6.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+	$('.showmenu').on('click', function(event) {
+		event.preventDefault();
+		$('body').toggleClass('menu-show');
+	});
+
+});
+
+
+	</script>
+</body>
+</html>

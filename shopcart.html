@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>六角西餐廳-購物車</title>
+	<link rel="icon" href="images/hexburger.ico" type="image/title-icon" / >
+	<script src="https://kit.fontawesome.com/094337ecc6.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container{
+			padding: 0;
+			position: relative;
+			background-color: #EFE9E7;
+		}
+		ul{
+			list-style-type: none;
+		}
+
+		.testnav{
+			background-image: url(images/header_desktop.png);
+			background-position: center center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			width: 100%;			
+		}
+		/*.test{
+			background-color: rgba(0,0,0,.6);
+			height: 56px;
+		}
+		.test .logo{
+			
+			float: left;			
+		}
+		.test .logo a{
+			margin-top: 16px;
+			margin-left: 10px;
+			width: 120px;
+			height: 24px;
+			display: block;
+			background-image: url(images/logo_w.png);
+		}
+		.test .menu{
+			
+			float: right;
+		}
+		.menu ul{
+			border: none;
+			list-style-type: none;
+		}
+		.menu ul li{
+			float: left;
+			line-height: 56px;
+			border: none;
+		}
+
+		.menu ul li a{
+			padding: 0 9px;
+			display: block;
+			text-decoration: none;
+			color: #fff;
+		}
+		.menu ul li:hover{
+			background-color: rgba(229,229,230,.6);
+		}
+		.menu ul li a:hover{
+			color: #3D1101;			
+		}
+
+		.menu-cart-icon{
+			position: absolute;
+			right: 10px;
+		}*/
+
+
+
+		.test .logo{
+			line-height: 55px;
+			float: left;			
+		}
+		.test{
+			background-color: rgba(0,0,0,.9);
+			height: 56px;
+		}
+		.test .logo a{
+			margin-top: 16px;
+			margin-left: 10px;
+			width: 120px;
+			height: 24px;
+			display: block;
+			background-image: url(images/logo_w.png);
+		}
+		.test .menu{			
+			float: right;
+			border: none;
+			list-style-type: none;
+		}
+		
+		.menu li{
+			text-align: right;			
+			display: inline-block;
+		}
+
+		.menu li a{
+			color: #fff;
+			text-decoration: none;
+			line-height: 55px;
+			margin: 0 5px;
+			display: block;
+		}
+		.menu li:hover{
+			background-color: rgba(229,229,230,.6);
+		}
+		.menu li a:hover{
+			color: #3D1101;			
+		}
+		.menu-burger{
+			display: none;			
+		}
+
+
+
+
+		.menu-cart-icon{
+			position: absolute;
+			right: 10px;
+		}
+		.header-bg{
+			display: flex;
+			width: 100%;
+			height: 420px;
+			margin: auto;
+			justify-content: center;
+			align-items: center;			
+		}
+		.header-txt{
+			margin: auto;
+			text-align: center;
+			background-color: rgba(0,0,0,.6);
+			width: 460px;
+		}
+		.txt-h2{
+			color: #fff;
+			font-size: 2rem;
+		}
+		.txt-p{
+			color: #fff;
+		}
+
+
+		.footer{
+			width: 100%;
+			display: flex;
+			background-color: #EFE9E7;
+			margin-top: 30px;
+		}
+		.footer-about{
+			padding: 1%;
+			width: 35%;
+		}
+		
+		.footer-tel{
+			padding: 1%;
+			width: 35%;
+		}
+		.footer-social{
+			padding: 1%;
+			width: 30%;
+		}
+		
+
+
+		.shopcart{
+			padding-top: 30px;
+		}
+		.step{
+			color: #3D1101;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			font-size: 14px;
+		}
+		.step i{
+			font-size: 32px;
+			vertical-align: middle;
+		}
+
+		.clearfix:before{
+			display: table;
+		}
+		.item{
+			margin: 0 auto;
+			width: 80%;
+			background-color: rgba(255,255,255,.3);
+		}
+		.rwd-table{
+			width: 100%;
+			margin: auto;
+			border: none;
+			
+		}
+		td{
+			border-bottom: 1px solid #000;
+			text-align: left;
+			padding: 10px 4px;
+			border-bottom: 1px solid #E2E2E2;
+			color: #3D1101;
+		}
+		
+		th{
+			border-bottom: 3px solid #FF5E45;
+			border-top: 3px solid #FF5E45;
+			text-align: center;
+			font-weight: bold;
+			padding: 10px 4px;
+			color: #3D1101;
+		}
+		.t1{
+		}
+		.t2{
+			font-weight: bold;
+			font-style: italic;
+
+		}
+		.t3{
+			font-style: italic;
+		}
+		.t3, .t4{
+			text-align: center;
+			font-weight: bold;
+			
+		}
+		a{
+			color: #3D1101;
+		}
+
+		
+
+		.total{
+			width: 100%;
+			margin: auto;
+		}
+		.table-total{
+			border-collapse:collapse;
+			border-spacing: 0;
+			float: right;
+			margin: 10px;
+			width: 250px;
+		}
+		.table-total tr {
+			width: 100%;
+			display: block;
+			padding: 5px;
+		}
+		.table-total tr td{	
+			width: 125px;
+			padding: 0;
+			border: none;
+		}
+		.table-total span{
+			font-style: italic;
+			font-weight: bold;
+		}
+		.table-total tr td:last-child{
+			text-align: right;
+			width: 125px;
+			font-style: italic;
+			font-weight: bold;
+		}
+		.table-total tr:nth-child(3){
+			border-bottom: 3px solid #FF5E45;
+		}
+		td input{
+			border-bottom: 1px solid #FF5E45;
+			text-align: right;
+			border: 0;
+			background-color: #F4F0EE;
+			outline: none;
+			font-style: italic;
+			color: #3D1101;
+			width: 125px;
+
+		}
+
+		
+		
+		
+
+		
+
+		
+
+		@media screen and (max-width: 767px){
+			
+			.footer{
+				display: block;
+			}
+			.footer .footer-about{
+				width: 100%;
+			}
+			.footer .footer-tel{
+				width: 100%;
+				text-align: center;
+			}
+			.footer .footer-social{
+				display: flex;
+				width: 100%;				
+				align-items: center;
+			}
+			.footer-social .social-logo-img{
+				display: none;				
+			}
+			.footer-social .social-icons{				
+				display: flex;
+				width: auto;
+			}
+
+
+
+			.rwd-table thead{display: none;}
+			.rwd-table tr{
+				display: block;
+				border-bottom: 3px solid #FF5E45;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+			}
+			.rwd-table tr:last-child{
+				border-bottom: none;
+			}
+			.rwd-table td{
+				display: block;
+				text-align: left;				
+				padding-left: 5.5em;
+				text-indent: -5.5em;				
+			}
+			.rwd-table td{
+				border-bottom: 1px solid #E2E2E2;
+			}
+			.rwd-table td:last-child{
+				border-bottom: none;				
+			}
+			.rwd-table td:before{
+				content: attr(data-th) " ";
+				display: inline-block;
+				width: 95px;
+				margin-right: 20px;
+				float: left;
+				color: #3D1101;
+				text-align: left;
+				font-weight: normal;
+			}
+			.rwd-table td:first-child{
+				color: #3D1101;
+				text-align: left;
+			}
+			.rwd-table .t1:before{
+				padding: 0;
+
+			}
+			.rwd-table .t2:before{
+				letter-spacing: 31px;
+				font-style: normal;
+
+			}
+			.rwd-table .t3:before{
+				letter-spacing: 31px;
+				font-style: normal;
+			}
+			.rwd-table .t4:before{
+				letter-spacing: 31px;
+				font-style: normal;
+			}
+			
+			.delete-icon{
+				display: block;
+			}
+			.step-text{
+				display: none;
+			}
+
+
+			.menu{
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 1.5s;
+				margin-top: 1px;
+				width: 100%;
+				position: absolute;
+				top:55px;
+				z-index: 100;
+				left: 0;
+				right: 0;
+				background-color: rgba(0,0,0,.9);				
+			}
+			.menu{
+				width: 100%;
+			}
+			.menu li{
+				display: block;
+				text-align: center;				
+				width: 100%;
+				border-bottom: 1px solid #222;
+			}
+			.menu li a{
+				color: #fff;				
+				width: 100%;
+			}
+			.menu-burger{
+				width: 30px;
+				display: inline-block;				
+				line-height: 55px;
+				float: right;
+				color: #fff;
+			}
+			.menu-burger:hover{
+				color: #fff;
+			}
+			.menu-show .menu{
+				max-height: 500px;
+			}
+			
+
+
+
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="testnav">
+			<!--<div class="test">
+				<div class="logo">
+					<a href=""></a>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href=""><i class="fa fa-cutlery menu-icon"></i>六角特色</a></li>
+						<li><a href=""><i class="fa fa-comment menu-icon"></i>連絡我們</a></li>
+						<li><a href=""><i class="fa fa-shopping-cart menu-icon"></i>線上訂餐</a></li>
+						<li><a href=""><i class="fa fa-sign-in menu-icon"></i>會員登入</a></li>
+						<li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+					</ul>
+				</div>
+			</div>-->
+
+
+			<div class="test">
+				<div class="logo">
+					<a href="index.html"></a>
+				</div>
+				<a href="" class="menu-burger"><i class="fas fa-list right"></i></a>
+				<div>
+					<ul class="menu">
+						<li><a href="index.html"><i class="fa fa-cutlery menu-icon"></i>六角特色</a></li>
+						<li><a href=""><i class="fa fa-comment menu-icon"></i>連絡我們</a></li>
+						<li><a href="shop.html"><i class="fa fa-shopping-cart menu-icon"></i>線上訂餐</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-in menu-icon"></i>會員登入</a></li>
+						<li><a href="shopcart.html"><i class="fas fa-shopping-cart"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+
+			<div class="header-bg">
+				<div class="header-txt">
+					<p class="txt-h2">咬一口就無法忘懷的漢堡</p>
+					<p class="txt-p">七夕絕對無法錯過得好滋味</p>
+					<p class="txt-p">六角大漢堡</p>
+				</div>
+			</div>			
+		</div>
+	<div class="shopcart">
+		<div class="step">
+			<i class="fas fa-list step-icon"> </i>
+			<span class="step-text"> STEP 1　購物清單　 </span>
+			<i class="fas fa-angle-right angle"> </i>
+			<i class="fas fa-pen step-icon"> </i>
+			<span class="step-text"> STEP 2 填寫資料 </span>
+			<i class="fas fa-angle-right angle"> </i>
+			<i class="fas fa-check-square step-icon"> </i>
+			<span class="step-text"> STEP 3 完城購物 </span>
+		</div>
+
+		<div class="item clearfix">
+			<table class="rwd-table">
+				<thead>
+				<tr>
+					<th>商品名稱</th>
+					<th>售價</th>
+					<th>數量</th>
+					<th>刪除</th>
+				</tr></thead>
+
+				<tbody>
+				<tr>
+					<td class="t1" data-th="商品名稱">經典漢堡套餐</td>
+					<td class="t2" data-th="售價">$120</td>
+					<td class="t3" data-th="數量">6</td>
+					<td class="t4" data-th="刪除"><a href=""><i class="fas fa-trash-alt delete-icon"></i></a></td>
+				</tr>
+				<tr>
+					<td class="t1" data-th="商品名稱">英俊香腸</td>
+					<td class="t2" data-th="售價">$1024</td>
+					<td class="t3" data-th="數量">6</td>
+					<td class="t4" data-th="刪除"><a href=""><i class="fas fa-trash-alt delete-icon"></a></i></td>
+				</tr>
+			</tbody>
+			</table>
+
+
+			<div class="table-bottom">
+				<div class="total">
+					<table class="table-total">
+						<tr>
+							<td>金額小計+<span>NT$</span></td>
+							<td>9,888</td>
+						</tr>
+						<tr>
+							<td>活動折扣-<span>NT$</span></td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>運送費用+<span>NT$</span></td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<td>實付金額 <span>NT$</span></td>
+							<td><input type="text" value="10,988"></td>
+						</tr>
+						
+
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		
+
+		
+		
+
+
+		
+		
+		<div class="footer">
+			<div class="footer-about">
+				<h2>關於 六角西餐廳</h2>
+				<p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
+			</div>
+
+			
+			<div class="footer-tel">
+				<h2>連絡方式</h2>
+				<ul>
+					<li class="tel-li"><i class="fas fa-map-marked-alt"></i>高雄市中正五路到底</li>
+					<li class="tel-li"><a href="+886 886 886"><i class="fas fa-phone-alt"></i>+886 886 886</a></li>
+					<li class="tel-li"><a href="service@hexschool.com"><i class="fas fa-envelope"></i>service@hexschool.com</a></li>
+				</ul>
+			</div>
+			<div class="footer-social">				
+				<img src="images/logo_l.png" alt="" class="social-logo-img">
+				<div class="social-icons">
+					<a href=""><img src="images/icon-fb.png" alt=""></a>
+					<a href=""><img src="images/icon-gp.png" alt=""></a>
+					<a href=""><img src="images/icon-tw.png" alt=""></a>
+				</div>
+				<h3>本網站為切版作品</h3>
+			</div>		
+
+		</div>
+
+		
+
+
+
+
+
+
+	</div>
+
+
+	
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('.menu-burger').on('click', function(event) {
+				event.preventDefault();
+				$('body').toggleClass('menu-show');
+			});
+
+		});
+	</script>
+</body>
+</html>

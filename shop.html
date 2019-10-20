@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>六角西餐廳-產品</title>
+	<link rel="icon" href="images/hexburger.ico" type="image/title-icon" / >
+	<script src="https://kit.fontawesome.com/094337ecc6.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container{
+			padding: 0;
+			position: relative;
+			background-color: #EFE9E7;
+		}
+
+		.testnav{
+			background-image: url(images/header_desktop.png);
+			background-position: center center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			width: 100%;			
+		}
+		/*.test{
+			background-color: rgba(0,0,0,.6);
+			height: 56px;
+		}
+		.test .logo{
+			
+			float: left;			
+		}
+		.test .logo a{
+			margin-top: 16px;
+			margin-left: 10px;
+			width: 120px;
+			height: 24px;
+			display: block;
+			background-image: url(images/logo_w.png);
+		}
+		.test .menu{
+			
+			float: right;
+		}
+		.menu ul{
+			border: none;
+			list-style-type: none;
+		}
+		.menu ul li{
+			float: left;
+			line-height: 56px;
+			border: none;
+		}
+
+		.menu ul li a{
+			padding: 0 9px;
+			display: block;
+			text-decoration: none;
+			color: #fff;
+		}
+		.menu ul li:hover{
+			background-color: rgba(229,229,230,.6);
+		}
+		.menu ul li a:hover{
+			color: #3D1101;			
+		}
+
+		.menu-cart-icon{
+			position: absolute;
+			right: 10px;
+		}*/
+
+
+
+		.test .logo{
+			line-height: 55px;
+			float: left;			
+		}
+		.test{
+			background-color: rgba(0,0,0,.9);
+			height: 56px;
+		}
+		.test .logo a{
+			margin-top: 16px;
+			margin-left: 10px;
+			width: 120px;
+			height: 24px;
+			display: block;
+			background-image: url(images/logo_w.png);
+		}
+		.test .menu{			
+			float: right;
+			border: none;
+			list-style-type: none;
+		}
+		
+		.menu li{
+			text-align: right;			
+			display: inline-block;
+		}
+
+		.menu li a{
+			color: #fff;
+			text-decoration: none;
+			line-height: 55px;
+			margin: 0 5px;
+			display: block;
+		}
+		.menu li:hover{
+			background-color: rgba(229,229,230,.6);
+		}
+		.menu li a:hover{
+			color: #3D1101;			
+		}
+		.menu-burger{
+			display: none;			
+		}
+
+
+
+
+		.menu-cart-icon{
+			position: absolute;
+			right: 10px;
+		}
+		.header-bg{
+			display: flex;
+			width: 100%;
+			height: 420px;
+			margin: auto;
+			justify-content: center;
+			align-items: center;			
+		}
+		.header-txt{
+			margin: auto;
+			text-align: center;
+			background-color: rgba(0,0,0,.6);
+			width: 460px;
+		}
+		.txt-h2{
+			color: #fff;
+			font-size: 2rem;
+		}
+		.txt-p{
+			color: #fff;
+		}
+		.content{
+			
+			margin: 20px auto;
+			background-color: #EFE9E7;
+			display: flex;
+		}
+		.content .list{
+			width: 20%;
+			margin-left: 1%;
+		}
+		.content .product{
+			width: 70%;
+		}
+		.content .list p{
+			display: inline-block;
+			line-height: 35px;
+			font-size: 20px;
+		}
+		.search-text{
+			padding-left: 10px;
+			display: flex;
+  			align-items: center; 
+			height: 35px;
+		}
+		.burger{
+			width: 35px;
+			height: 35px;
+			font-size: 35px;
+			color: #3D1101;
+		}
+		.search-text p{
+			display: inline-block;
+			font-weight: bold;
+			font-size: 20px;
+			margin: 0;
+		}
+
+		.search{
+			margin: 0 1%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.search-btn{
+			width: 70%;
+			height: 35px;
+		}
+		.search-buy{
+			padding-right: 15px;
+			display: flex;
+  			align-items: center;
+			height: 35px;
+			
+		}
+		
+		
+		.search-input{
+			height: 35px;
+			width: 70%;
+			border: 3px solid #3D1101;
+		}
+		.search-btn button{
+			height: 35px;
+			width: 35px;
+			border: none;
+			background-color: #3D1101;
+
+		}
+		button i{
+			color: #fff;
+		}
+
+
+		
+		.search-buy .buy-ap p{
+			color: #3D1101;
+			font-size: 20px;
+			display: inline-block;
+			margin: 0;
+		}
+		.search-buy a{
+			display: inline-block;			
+			font-size: 18px;
+			line-height: 31px;
+		}
+		.search-buy .buy-ai i{
+			line-height: 31px;
+			font-size: 32px;
+			color: #3D1101;
+		}
+
+		.ul-list{
+			margin-top: 20px;			
+		}
+		ul{
+			list-style-type: none;
+		}
+		li{
+			color: #3D1101;
+			border-bottom: 1px solid #3D1101;
+			line-height: 35px;
+		}
+		ul li .list-sort{			
+			color: #3D1101;
+			display: block;
+		}
+		.list-sort:hover{
+			text-decoration: none;
+			color: #fff;
+		}
+		li:hover{
+			background-color: #3D1101;
+		}
+		.product-group{
+			display: table;
+			margin-bottom: 20px;
+		}
+		.product-item{
+			width: 33.33%;
+			float: left;
+			position: relative;
+			box-sizing: border-box;
+			padding: 10px;
+			margin-top: 20px;
+		}
+		.product-box{
+			box-shadow: 3px 3px 4px 0px rgba(0,0,0,.6);
+		}
+		/*.tag{
+			position: absolute;
+			right: 1;
+			top: -1;
+		}
+		.tag .middle{
+			position: absolute;
+			top: 22px;
+			right: -25px;
+			width: 65px;
+			font-weight: bold;
+			color: #fff;
+			height: 0;
+			border-bottom: 25px solid #00e6c0;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			transform: rotate(45deg);
+		}
+		.middle span{
+			display: block;
+			margin-top: 4px;
+			margin-left: 1px;
+		}
+		.tag .top{
+			
+		}*/
+		img{
+			max-width: 100%;
+		}
+		.box-text{
+			text-align: center;
+			color: #3D1101;
+		}
+		.title{
+			text-align: center;
+			font-size: 24px;
+			color: #3D1101;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+		.box-text .eng{
+			font-size: 12px;
+		}
+		
+		.line{
+			height: 3px;
+			
+			width: 80%;
+			margin: 10px auto;
+			display: flex;
+			border-bottom: 2px solid #3D1101;
+		}
+		.price{
+			font-size: 24px;
+		}
+		.addcart{
+			border: 1px solid #FF5E45;
+			color: #FF5E45;
+			width: 95%;
+			font-size: 14px;
+			border-radius: 5%;
+			text-decoration:none;
+			background-color: #EFE9E7;
+			padding: 5px;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+		.addcart i{
+			color: #FF5E45;
+		}
+		.love{
+			position: absolute;
+			font-size: 20px;
+			z-index: 1;
+			top: 10px;
+			left: 15px;
+			color: #fff;
+			padding: 3px;
+			border-radius: 5px;
+		}
+		.love a{
+			color: #fff;
+		}
+
+		.footer{
+			width: 100%;
+			display: flex;
+			background-color: #EFE9E7;	
+		}
+		.footer-about{
+			padding: 1%;
+			width: 35%;
+		}
+		
+		.footer-tel{
+			padding: 1%;
+			width: 35%;
+		}
+		.footer-social{
+			padding: 1%;
+			width: 30%;
+		}
+
+		
+
+		.tel-li{
+			padding: 0;
+			border: none;
+			font-size: 15px;
+			line-height: 15px;
+			margin-bottom: 5px;
+		}
+		.tel-li i{
+			display: inline-block;
+		}
+		.tel-li a{
+			text-decoration: none;
+			background-color: #EFE9E7;
+			color: #3D1101;
+		}
+		.tel-li:hover{
+			color: #3D1101;
+			background-color: #EFE9E7;
+		}
+		h2{
+			margin-bottom: 20px;
+		}
+
+		.social-logo-img{
+			width: 100%;
+			white-space: nowrap;
+			position: relative;
+			right: 0;
+			margin-bottom: 16px;
+		}
+		.social-icons{
+			margin-bottom: 16px;
+			display: block;
+			float: left;
+			width: 100%;
+			text-align: right;
+		}
+		.footer-social h3{
+			text-align: right;
+			color: red;
+		}
+		.menu-icon{
+			margin: 0 5px;
+		}
+
+		@media screen and (max-width: 767px){
+			.content{
+				display: block;
+			}
+			.content .list{
+				display: block;
+				width: 94%;
+				margin-left: 3%;
+				margin-right: 3%; 
+			}
+			.content .product{
+				width: 100%;
+			}
+			.content .product-item{
+				width: 100%;
+			}
+			.footer{
+				display: block;
+			}
+			.footer .footer-about{
+				width: 100%;
+			}
+			.footer .footer-tel{
+				width: 100%;
+				text-align: center;
+			}
+			.footer .footer-social{
+				display: flex;
+				width: 100%;				
+				align-items: center;
+			}
+			.footer-social .social-logo-img{
+				display: none;				
+			}
+			.footer-social .social-icons{
+				
+				display: flex;
+				width: auto;
+			}
+
+
+
+			.menu{
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 1.5s;
+				margin-top: 1px;
+				width: 100%;
+				position: absolute;
+				top:55px;
+				z-index: 100;
+				left: 0;
+				right: 0;
+				background-color: rgba(0,0,0,.9);				
+			}
+			.menu{
+				width: 100%;
+			}
+			.menu li{
+				display: block;
+				text-align: center;				
+				width: 100%;
+				border-bottom: 1px solid #222;
+			}
+			.menu li a{
+				color: #fff;				
+				width: 100%;
+			}
+			.menu-burger{
+				width: 30px;
+				display: inline-block;				
+				line-height: 55px;
+				float: right;
+				color: #fff;
+			}
+			.menu-burger:hover{
+				color: #fff;
+			}
+			.menu-show .menu{
+				max-height: 500px;
+			}
+
+			.search{
+				display: block;
+			}
+			.search-btn{
+				width: 100%;
+				height: 35px;
+				margin-top: 10px;
+			}
+			.search-buy{
+				padding-right: 15px;
+				display: flex;
+				height: 35px;
+				margin-top: 10px;
+				float: right;
+			}
+			.search-input{				
+				width: 85%;
+			}
+			.product-group{
+				width: 100%;
+			}
+
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="testnav">
+			<!--<div class="test">
+				<div class="logo">
+					<a href=""></a>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href=""><i class="fa fa-cutlery menu-icon"></i>六角特色</a></li>
+						<li><a href=""><i class="fa fa-comment menu-icon"></i>連絡我們</a></li>
+						<li><a href=""><i class="fa fa-shopping-cart menu-icon"></i>線上訂餐</a></li>
+						<li><a href=""><i class="fa fa-sign-in menu-icon"></i>會員登入</a></li>
+						<li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+					</ul>
+				</div>
+			</div>-->
+
+
+			<div class="test">
+				<div class="logo">
+					<a href=""></a>
+				</div>
+				<a href="index.html" class="menu-burger"><i class="fas fa-list right"></i></a>
+				<div>
+					<ul class="menu">
+						<li><a href="index.html"><i class="fa fa-cutlery menu-icon"></i>六角特色</a></li>
+						<li><a href=""><i class="fa fa-comment menu-icon"></i>連絡我們</a></li>
+						<li><a href="shop.html"><i class="fa fa-shopping-cart menu-icon"></i>線上訂餐</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-in menu-icon"></i>會員登入</a></li>
+						<li><a href="shopcart.html"><i class="fas fa-shopping-cart"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class="header-bg">
+				<div class="header-txt">
+					<p class="txt-h2">咬一口就無法忘懷的漢堡</p>
+					<p class="txt-p">七夕絕對無法錯過得好滋味</p>
+					<p class="txt-p">六角大漢堡</p>
+				</div>
+			</div>			
+		</div>
+
+
+		
+		<div class="content">
+			<!--left-->
+			<div class="list">
+				<div class="search-text">
+					<i class="burger fas fa-hamburger"></i>
+					<p>線上訂購美食</p>
+				</div>
+				<div class="ul-list">
+				<ul>
+					<li><a href="" class="list-sort">全部(23)</a></li>
+					<li><a href="" class="list-sort">只愛薯條(18)</a></li>
+					<li><a href="" class="list-sort">加熱就可食(1)</a></li>
+					<li><a href="" class="list-sort">不敗漢堡系列(4)</a></li>
+				</ul>
+			</div>
+			</div>
+
+			<!--right-->
+			<div class="product">
+				<div class="search">
+					<div class="search-btn">
+						<input type="text" class="search-input">
+						<button><i class="fas fa-search"></i></button>
+					</div>
+					<div class="search-buy">
+						<a href="" class="buy-ap"><p>結帳去</p></a>|
+						<a href="" class="buy-ai"><i class="fas fa-shopping-cart"></i></a>
+					</div>
+				</div>
+				
+				<!--product group-->
+				<div class="product-group">
+					<div class="product-item">
+						<div class="product-box">
+							<!--<div class="tag">
+								<div class="middle">
+									<span>熱銷美食</span>
+								</div>
+								<div class="top"></div>
+								<div class="bot"></div>
+							</div>-->
+							<img src="images/Bitmap.png" alt="">
+							<div class="love">
+								<a href="" class="addlove">
+									<i class="far fa-heart heart-icon"></i>
+								</a>
+							</div>
+							<div class="box-text">
+								<p class="title">經典漢堡套餐</p>
+								<span class="eng">Classic Hamburger Package</span>
+								<div class="line"></div>
+								<div class="price">$120</div>
+								<button class="addcart"><i class="fas fa-shopping-cart"></i>加入購物車</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-item">
+						<div class="product-box">
+							<!--<div class="tag">
+								<div class="middle">
+									<span>熱銷美食</span>
+								</div>
+								<div class="top"></div>
+								<div class="bot"></div>
+							</div>-->
+							<img src="images/Bitmap.png" alt="">
+							<div class="love">
+								<a href="" class="addlove">
+									<i class="far fa-heart"></i>
+								</a>
+							</div>
+							<div class="box-text">
+								<p class="title">經典漢堡套餐</p>
+								<span class="eng">Classic Hamburger Package</span>
+								<div class="line"></div>
+								<div class="price">$120</div>
+								<button class="addcart"><i class="fas fa-shopping-cart"></i>加入購物車</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-item">
+						<div class="product-box">
+							<!--<div class="tag">
+								<div class="middle">
+									<span>熱銷美食</span>
+								</div>
+								<div class="top"></div>
+								<div class="bot"></div>
+							</div>-->
+							<img src="images/Bitmap.png" alt="">
+							<div class="love">
+								<a href="" class="addlove">
+									<i class="far fa-heart"></i>
+								</a>
+							</div>
+							<div class="box-text">
+								<p class="title">經典漢堡套餐</p>
+								<span class="eng">Classic Hamburger Package</span>
+								<div class="line"></div>
+								<div class="price">$120</div>
+								<button class="addcart"><i class="fas fa-shopping-cart"></i>加入購物車</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-item">
+						<div class="product-box">
+							<!--<div class="tag">
+								<div class="middle">
+									<span>熱銷美食</span>
+								</div>
+								<div class="top"></div>
+								<div class="bot"></div>
+							</div>-->
+							<img src="images/Bitmap.png" alt="">
+							<div class="love">
+								<a href="" class="addlove">
+									<i class="far fa-heart"></i>
+								</a>
+							</div>
+							<div class="box-text">
+								<p class="title">經典漢堡套餐</p>
+								<span class="eng">Classic Hamburger Package</span>
+								<div class="line"></div>
+								<div class="price">$120</div>
+								<button class="addcart"><i class="fas fa-shopping-cart"></i>加入購物車</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-about">
+				<h2>關於 六角西餐廳</h2>
+				<p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
+			</div>
+
+			
+			<div class="footer-tel">
+				<h2>連絡方式</h2>
+				<ul>
+					<li class="tel-li"><i class="fas fa-map-marked-alt"></i>高雄市中正五路到底</li>
+					<li class="tel-li"><a href="+886 886 886"><i class="fas fa-phone-alt"></i>+886 886 886</a></li>
+					<li class="tel-li"><a href="service@hexschool.com"><i class="fas fa-envelope"></i>service@hexschool.com</a></li>
+				</ul>
+			</div>
+			<div class="footer-social">				
+				<img src="images/logo_l.png" alt="" class="social-logo-img">
+				<div class="social-icons">
+					<a href=""><img src="images/icon-fb.png" alt=""></a>
+					<a href=""><img src="images/icon-gp.png" alt=""></a>
+					<a href=""><img src="images/icon-tw.png" alt=""></a>
+				</div>
+				<h3>本網站為切版作品</h3>
+			</div>
+
+			
+
+		</div>
+
+		
+
+
+
+
+
+
+	</div>
+
+
+	
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('.menu-burger').on('click', function(event) {
+				event.preventDefault();
+				$('body').toggleClass('menu-show');
+			});
+
+		});
+	</script>
+</body>
+</html>

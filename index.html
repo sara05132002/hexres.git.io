@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>六角西餐廳</title>
+	<script src="https://kit.fontawesome.com/094337ecc6.js"></script>
+	<link rel="icon" href="images/hexburger.ico" type="image/title-icon" / >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container{
+			padding: 0;
+			position: relative;
+			background-color: #EFE9E7;
+		}
+		ul{
+			list-style-type: none;
+		}
+
+		.testnav{
+			background-image: url(images/header_desktop.png);
+			background-position: center center;
+			-webkit-background-size: cover;
+			background-size: cover;
+			width: 100%;			
+		}
+		/*.test{
+			background-color: rgba(0,0,0,.6);
+			height: 56px;
+		}
+		.test .logo{
+			
+			float: left;			
+		}
+		.test .logo a{
+			margin-top: 16px;
+			margin-left: 10px;
+			width: 120px;
+			height: 24px;
+			display: block;
+			background-image: url(images/logo_w.png);
+		}
+		.test .menu{
+			
+			float: right;
+		}
+		.menu ul{
+			border: none;
+			list-style-type: none;
+		}
+		.menu ul li{
+			float: left;
+			line-height: 56px;
+			border: none;
+		}
+
+		.menu ul li a{
+			padding: 0 9px;
+			display: block;
+			text-decoration: none;
+			color: #fff;
+		}
+		.menu ul li:hover{
+			background-color: rgba(229,229,230,.6);
+		}
+		.menu ul li a:hover{
+			color: #3D1101;			
+		}
+
+		.menu-cart-icon{
+			position: absolute;
+			right: 10px;
+		}*/
+
+
+
+		.test .logo{
+			line-height: 55px;
+			float: left;			
+		}
+		.test{
+			background-color: rgba(0,0,0,.9);
+			height: 56px;
+		}
+		.test .logo a{
+			margin-top: 16px;
+			margin-left: 10px;
+			width: 120px;
+			height: 24px;
+			display: block;
+			background-image: url(images/logo_w.png);
+		}
+		.test .menu{			
+			float: right;
+			border: none;
+			list-style-type: none;
+		}
+		
+		.menu li{
+			text-align: right;			
+			display: inline-block;
+		}
+
+		.menu li a{
+			color: #fff;
+			text-decoration: none;
+			line-height: 55px;
+			margin: 0 5px;
+			display: block;
+		}
+		.menu li:hover{
+			background-color: rgba(229,229,230,.6);
+		}
+		.menu li a:hover{
+			color: #3D1101;			
+		}
+		.menu-burger{
+			display: none;			
+		}
+
+
+
+
+		.header-bg{
+			display: flex;
+			width: 100%;
+			height: 420px;
+			margin: auto;
+			justify-content: center;
+			align-items: center;			
+		}
+		.header-txt{
+			margin: auto;
+			text-align: center;
+			background-color: rgba(0,0,0,.6);
+			width: 460px;
+		}
+		.txt-h2{
+			color: #fff;
+			font-size: 2rem;
+		}
+		.txt-p{
+			color: #fff;
+		}
+
+
+		.footer{
+			width: 100%;
+			display: flex;
+			background-color: #EFE9E7;	
+		}
+		.footer-about{
+			padding: 1%;
+			width: 35%;
+		}
+		
+		.footer-tel{
+			padding: 1%;
+			width: 35%;
+		}
+		.footer-social{
+			padding: 1%;
+			width: 30%;
+		}
+
+		
+
+		.tel-li{
+			padding: 0;
+			border: none;
+			font-size: 15px;
+			line-height: 15px;
+			margin-bottom: 5px;
+		}
+		.tel-li i{
+			display: inline-block;
+		}
+		.tel-li a{
+			text-decoration: none;
+			background-color: #EFE9E7;
+			color: #3D1101;
+		}
+		.tel-li:hover{
+			color: #3D1101;
+			background-color: #EFE9E7;
+		}
+		h2{
+			margin-bottom: 20px;
+		}
+
+		.social-logo-img{
+			width: 100%;
+			white-space: nowrap;
+			position: relative;
+			right: 0;
+			margin-bottom: 16px;
+		}
+		.social-icons{
+			margin-bottom: 16px;
+			display: block;
+			float: left;
+			width: 100%;
+			text-align: right;
+		}
+		.footer-social h3{
+			text-align: right;
+			color: red;
+		}
+		.menu-icon{
+			margin: 0 5px;
+		}
+
+
+
+		.special-title{
+			text-align: center;
+			margin: 40px 0;
+		}
+		.special-title p{
+			color: #3D1101;
+			margin: 0;
+			font-size: 20px;
+		}
+		.special-detail{
+			display: flex;
+			margin-bottom: 50px;
+		}
+		.detial-item{
+			width: 100%;
+			margin: 0 10px;
+			padding: 0 10px;
+		}
+		.detial-item img{
+			display: block;
+			border-radius: 100px;
+			max-width: 100%;
+			margin: auto;
+		}
+		.detial-item h4{
+			text-align: center;
+			color: #3D1101;
+			margin: 10px 0;
+		}
+		.detial-item p{
+			color: #3D1101;
+			margin: 0;
+			text-align: left;
+		}
+
+
+		.cook{
+			display: flex;
+			background-color: #3D1101;
+		}
+		.cook-img{
+			width: 50%;
+			margin-left: 10px;
+		}
+		.cook-img img{
+			max-width: 100%;
+		}
+		.cook-p{
+			width: 45%;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 10px;
+		}
+
+
+
+		.customer-title{
+			text-align: center;
+			margin: 40px 0;
+			font-size: 20px;
+			color: #3D1101;
+		}
+		.customer{
+			display: flex;
+			margin: 50px 0;
+			padding: 0 10px;
+		}
+		.customer-pic{
+			border-radius: 100px;
+		}
+		
+		.customer-group{
+			padding: 0 10px;
+		}
+		
+		.customer-group-title{
+			color: #3D1101;
+			margin-bottom: 0;
+			margin-left: 10px;
+			display: inline-block;
+		}
+		.customer-group-detail{
+			color: #3D1101;
+			padding-left: 80px; 
+		}
+		.customer-group span{
+			color: #3D1101;
+			text-align: right;
+			display: block;
+		}
+
+		.map-all{
+			background-color: #FAFAFA;
+			padding-bottom: 50px;
+			width: 100%;
+		}
+		.map-title{
+			text-align: center;
+			font-size: 24px;
+			color: #3D1101;
+			padding-top: 50px;
+			margin-bottom: 15px;
+		}
+		.map{
+			display: flex;
+		}
+		.map-pic{
+			padding: 1%;
+			width: 48%;
+			float: left;
+			margin-left: 2%;
+			text-align: right;
+		}
+		.mappng{
+			max-width: 100%;
+		}
+
+		.map-input{
+			width: 46%;
+			float: left;
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+		.map-input-text{
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		label,input{
+			display: block;
+			width: 95%;
+			font-size: 100%;
+		}
+		label{
+			color: #3D1101;
+		}
+		.textbox{
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			padding: 5px 2%;
+			background-color: #fff;
+		}
+
+		.people input{
+			display: none;
+		}
+		.people input+label{
+			display: inline-block;
+			position: relative;
+			width: 30px;
+			height: 30px;
+			font-size: 13px;
+			color: #888;
+			text-align: center;
+			cursor: pointer;
+			line-height: 30px;
+			border: 1px solid #ccc;
+			background-color: #fff;
+			border-radius: 100px;
+		}
+		.map-input-btn{
+			text-align: right;
+		}
+		.button{
+			margin: 0 1%;
+			font-size: 14px;
+			padding: 4px 20px;
+			color: #fff;
+			background-color: #C8C8C8;
+			border: 1px solid #C8C8C8;
+			border-radius: 2px;
+		}
+		.button-go{
+			background-color: #F56C23;
+			border: 1px solid #F56C23;
+		}
+
+		
+
+		@media screen and (max-width: 767px){
+			
+			.footer{
+				display: block;
+			}
+			.footer .footer-about{
+				width: 100%;
+			}
+			.footer .footer-tel{
+				width: 100%;
+				text-align: center;
+			}
+			.footer .footer-social{
+				display: flex;
+				width: 100%;				
+				align-items: center;
+			}
+			.footer-social .social-logo-img{
+				display: none;				
+			}
+			.footer-social .social-icons{				
+				display: flex;
+				width: auto;
+			}
+			.special-detail{
+				display: block;
+			}
+			.cook{
+				display: block;
+			}
+			.cook-img{
+				margin: 0;
+				width: 100%;
+				
+			}
+			.cook-img img{
+				width: 80%;
+				display: block;
+				margin: auto;
+			}
+			.cook-p{
+				padding-top: 10px;
+				width: 100%;
+			}
+			.customer{
+				display: block;
+			}
+			.map-all{
+				display: block;
+				height: 1000px;
+			}
+			.map{
+				display: block;
+			}
+			.map-pic{
+				width: 100%;
+				text-align: center;
+			}
+			.map-input{
+				margin: 0 2%;
+				width: 95%;
+			}
+			.map-input-btn{
+				text-align: center;
+			}
+			input{
+				width: 100%;
+				margin: 0;
+			}
+
+
+
+			.menu{
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 1.5s;
+				margin-top: 1px;
+				width: 100%;
+				position: absolute;
+				top:55px;
+				z-index: 100;
+				left: 0;
+				right: 0;
+				background-color: rgba(0,0,0,.9);				
+			}
+			.menu{
+				width: 100%;
+			}
+			.menu li{
+				display: block;
+				text-align: center;				
+				width: 100%;
+				border-bottom: 1px solid #222;
+			}
+			.menu li a{
+				color: #fff;				
+				width: 100%;
+			}
+			.menu-burger{
+				width: 30px;
+				display: inline-block;				
+				line-height: 55px;
+				float: right;
+				color: #fff;
+			}
+			.menu-burger:hover{
+				color: #fff;
+			}
+			.menu-show .menu{
+				max-height: 500px;
+			}
+
+
+
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="testnav">
+			<!--<div class="test">
+				<div class="logo">
+					<a href=""></a>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href=""><i class="fa fa-cutlery menu-icon"></i>六角特色</a></li>
+						<li><a href=""><i class="fa fa-comment menu-icon"></i>連絡我們</a></li>
+						<li><a href=""><i class="fa fa-shopping-cart menu-icon"></i>線上訂餐</a></li>
+						<li><a href=""><i class="fa fa-sign-in menu-icon"></i>會員登入</a></li>
+						<li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+					</ul>
+				</div>
+			</div>-->
+
+
+			<div class="test">
+				<div class="logo">
+					<a href=""></a>
+				</div>
+				<a href="" class="menu-burger"><i class="fas fa-list right"></i></a>
+				<div>
+					<ul class="menu">
+						<li><a href=""><i class="fa fa-cutlery menu-icon"></i>六角特色</a></li>
+						<li><a href=""><i class="fa fa-comment menu-icon"></i>連絡我們</a></li>
+						<li><a href="shop.html"><i class="fa fa-shopping-cart menu-icon"></i>線上訂餐</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-in menu-icon"></i>會員登入</a></li>
+						<li><a href="shopcart.html"><i class="fas fa-shopping-cart"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+			<div class="header-bg">
+				<div class="header-txt">
+					<p class="txt-h2">咬一口就無法忘懷的漢堡</p>
+					<p class="txt-p">七夕絕對無法錯過得好滋味</p>
+					<p class="txt-p">六角大漢堡</p>
+				</div>
+			</div>			
+		</div>
+
+
+		<div class="special-title">
+			<p>客人總是在詢問</p>
+			<p>這麼好吃的秘訣是什麼</p>
+		</div>
+		<div class="special">
+			
+			<div class="special-detail">
+				<div class="detial-item">
+					<img src="images/feature_1.png" alt="">
+					<h4>台灣本土蔬菜</h4>
+					<p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.</p>
+				</div>
+
+				<div class="detial-item">
+					<img src="images/feature_2.png" alt="">
+					<h4>專業米其林廚師</h4>
+					<p>Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+				</div>
+
+				<div class="detial-item">
+					<img src="images/feature_3.png" alt="">
+					<h4>對於專業不能退讓</h4>
+					<p>Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="cook">
+			<div class="cook-img">
+				<img src="images/main_chef_brown.png" alt="">
+			</div>
+			<div class="cook-p">
+				<p>今日主廚：帕金森、梅在帕<br>Tody Chef: Plum in Shock</p>
+				<p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor sollicitudin fermentum. Donec congue lorem a molestie bibendum.</p>
+			</div>
+		</div>
+
+
+		<div class="customer-title">聽聽別人的感想</div>
+		<div class="customer">
+			<div class="customer-group">				
+				<img src="images/avatar_1.png" alt="" class="customer-pic">
+				<p class="customer-group-title">高雄吃一口</p>					
+				<p class="customer-group-detail">自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+				<span>--產品經理</span>								
+			</div>
+
+			<div class="customer-group">				
+				<img src="images/avatar_2.png" alt="" class="customer-pic">
+				<p class="customer-group-title">高雄吃一口</p>					
+				<p class="customer-group-detail">自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+				<span>--產品經理</span>								
+			</div>
+
+			<div class="customer-group">				
+				<img src="images/avatar_3.png" alt="" class="customer-pic">
+				<p class="customer-group-title">高雄吃一口</p>					
+				<p class="customer-group-detail">自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+				<span>--產品經理</span>								
+			</div>
+		</div>
+
+		
+		<div class="map-all">
+			<div class="map-title">我們的位置不太夠坐<br>要不要先訂位呢?</div>
+			<div class="map">
+				<div class="map-pic">
+					<img src="images/Map.png" alt="" class="mappng">
+				</div>
+				<div class="map-input">
+					<div class="map-input-text">
+						<label for="name">姓名</label>
+						<input type="name" id="name" class="textbox" placeholder="您的名字">
+					</div>
+					
+					<div class="map-input-text">
+						<label for="phone">電話</label>
+						<input type="tel" id="phone" class="textbox" placeholder="手機號碼">
+					</div>
+					
+					<div class="map-input-text">
+						<label for="email">信箱</label>
+						<input type="email" id="email" class="textbox" placeholder="您的信箱">
+					</div>
+					
+					<div class="map-input-text">
+						<label for="people">人數</label>
+						<input type="number" id="people" class="textbox" placeholder="您的信箱">
+					</div>
+					
+					<div class="map-input-text">
+						<label>是否需要素食</label>
+						<div class="people">
+							<input type="radio" id="yes" name="people">
+							<label for="yes">是</label>
+							<input type="radio" id="no" name="people">
+							<label for="no">否</label>
+						</div>
+					</div>
+					<div class="map-input-btn">
+						<button class="button">取消</button>
+						<button class="button button-go">送出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+
+		
+		
+		<div class="footer">
+			<div class="footer-about">
+				<h2>關於 六角西餐廳</h2>
+				<p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</p>
+			</div>
+
+			
+			<div class="footer-tel">
+				<h2>連絡方式</h2>
+				<ul>
+					<li class="tel-li"><i class="fas fa-map-marked-alt"></i>高雄市中正五路到底</li>
+					<li class="tel-li"><a href="+886 886 886"><i class="fas fa-phone-alt"></i>+886 886 886</a></li>
+					<li class="tel-li"><a href="service@hexschool.com"><i class="fas fa-envelope"></i>service@hexschool.com</a></li>
+				</ul>
+			</div>
+			<div class="footer-social">				
+				<img src="images/logo_l.png" alt="" class="social-logo-img">
+				<div class="social-icons">
+					<a href=""><img src="images/icon-fb.png" alt=""></a>
+					<a href=""><img src="images/icon-gp.png" alt=""></a>
+					<a href=""><img src="images/icon-tw.png" alt=""></a>
+				</div>
+				<h3>本網站為切版作品</h3>
+			</div>
+
+			
+
+		</div>
+
+		
+
+
+
+
+
+
+	</div>
+
+
+	
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('.menu-burger').on('click', function(event) {
+				event.preventDefault();
+				$('body').toggleClass('menu-show');
+			});
+
+		});
+	</script>
+</body>
+</html>
